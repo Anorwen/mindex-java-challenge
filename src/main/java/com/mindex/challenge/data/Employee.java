@@ -1,8 +1,11 @@
 package com.mindex.challenge.data;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
 public class Employee {
+    @Id
     private String employeeId;
     private String firstName;
     private String lastName;
@@ -59,5 +62,16 @@ public class Employee {
 
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Employee) {
+            Employee otherEmployee = (Employee) o;
+            if(this.getEmployeeId().equals(otherEmployee.getEmployeeId())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
