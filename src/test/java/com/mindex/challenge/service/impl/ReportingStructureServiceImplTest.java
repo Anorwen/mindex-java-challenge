@@ -34,7 +34,7 @@ public class ReportingStructureServiceImplTest {
 
     @Before
     public void setup() {
-        structureUrl = "http://localhost:" + port + "/reporting-structure/{id}";
+        structureUrl = "http://localhost:" + port + "/employee/{id}/reporting-structure/";
     }
 
     @Test
