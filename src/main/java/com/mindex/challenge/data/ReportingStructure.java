@@ -5,6 +5,10 @@ public class ReportingStructure {
     private Employee employee;
     private int numberOfReports;
 
+    public ReportingStructure() {
+
+    }
+
     public ReportingStructure(Employee employee) {
         this.employee = employee;
         this.numberOfReports = findAllReports(employee) - 1; // Don't Include Yourself
