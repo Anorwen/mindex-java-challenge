@@ -2,12 +2,12 @@
 I attempted to match the standards I discovered, primarily with styling and organization. After completing the below
 I believe there is an opportunity to refactor and abstract certain things (depending on the future of the project).
 I have highlighted design choices made below for each task.
-##Task 1
+## Task 1
 In my mind the Report Structure can be derived, so there is no need for a database for this entity. As such the java
 class contains other java entities to simplify things as much as possible (no need to worry about how it will be stored
 in a database). At this stage I noticed that there was something wrong with the update method for employees, so I
 patched that issue (I believe it had to do with equals).
-##Task 2
+## Task 2
 While I could have used Employee inside the compensation object type, I decided to go with the employee id since it
 would be stored in a database. If we need to present more refined information to the user another object can be made
 similar to the Report Structure.
